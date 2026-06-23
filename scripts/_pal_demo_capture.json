@@ -1,0 +1,5 @@
+{
+ "label": "Compound",
+ "code": "# Initialize variables\ninitial_population = 1200\ngrowth_rate = 8 / 100  # Convert percentage to decimal\nyears = 10\n\n# Calculate population after 10 years using compound interest formula\nanswer = initial_population * (1 + growth_rate) ** years\n\n# Round the result to the nearest whole person\nanswer = round(answer)\n\n# Print the final answer\nprint(answer)",
+ "val": 2591.0
+}

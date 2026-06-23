@@ -1,0 +1,78 @@
+
+======================================================================
+CODE  — is_prime, graded by grade_is_prime (incumbent qwen2.5-coder = 12/12)
+======================================================================
+codeqwen:7b         0/12    5.3s  KeyError
+magicoder:7b       12/12    6.0s  all correct
+opencoder:8b       12/12    8.5s  all correct
+stable-code:3b      0/12    5.2s  SyntaxError
+
+======================================================================
+EMBEDDING — GAP_PAIRS related vs unrelated cosine (bigger gap = better)
+======================================================================
+nomic-embed-text       related=0.808  unrelated=0.455  gap=0.353
+embeddinggemma:300m    related=0.791  unrelated=0.354  gap=0.437
+
+======================================================================
+MULTILINGUAL — translate one sentence; aya:8b vs incumbent gemma4:latest
+======================================================================
+  gemma4:latest  French    -> 'La récolte était bonne cette année, donc le village a célébré.'
+  gemma4:latest  Swahili   -> 'Mavuno yalikuwa mazuri mwaka huu, kwa hivyo kijiji kilasherehekea.'
+  gemma4:latest  Yoruba    -> 'Ìgbà tí a kó ààkiri ni ó dára ní ọdún yìí, nítorí náà ìlú náà ṣe àṣà.'
+  gemma4:latest  Tagalog   -> 'Ang ani ay maganda ngayong taon, kaya nagdiwang ang nayon.'
+  aya:8b         French    -> '"La récolte a été bonne cette année, alors le village a célébré."'
+  aya:8b         Swahili   -> "'Umalizi wa kuwajua kwa siku hii, na vile vile vilini vya msingi watej"
+  aya:8b         Yoruba    -> '"Oun wàti o, sọ o ti oya nla."'
+  aya:8b         Tagalog   -> '"Ang panahon ng kurot ay nasa buong taon, kaya\'t ang lungsod ay nag-as'
+
+======================================================================
+REASONING — NOVEL_PROBLEMS snap(think=False) vs think(think=True), temp 0
+======================================================================
+  lfm2.5-thinking:1.2b Well       snap="<think> Okay, let'"   think='4'
+  lfm2.5-thinking:1.2b Ages       snap="<think> Okay, let'"   think='12'
+  lfm2.5-thinking:1.2b Trains     snap="<think> Okay, let'"   think='2'
+  lfm2.5-thinking:1.2b Handshakes snap="<think> Okay, let'"   think='7'
+lfm2.5-thinking:1.2b snap 1/4  think 4/4  (native-think, think total 38s)
+  orca2:7b             Well       snap='To solve this prob'   think='To solve this prob'
+  orca2:7b             Ages       snap="Let Sara's current"   think="Let Sara's current"
+  orca2:7b             Trains     snap="Let's denote the d"   think="Let's denote the d"
+  orca2:7b             Handshakes snap='Let n be the numbe'   think='Let n be the numbe'
+orca2:7b             snap 1/4  think 4/4  (no-think-trace, think total 34s)
+  phi4:14b             Well       snap='5'                    think='5'
+  phi4:14b             Ages       snap='12'                   think='12'
+  phi4:14b             Trains     snap='2'                    think='2'
+  phi4:14b             Handshakes snap='6'                    think='6'
+phi4:14b             snap 2/4  think 2/4  (no-think-trace, think total 1s)
+  phi4-reasoning:14b   Well       snap='<think>We are aske'   think='<think>We are aske'
+  phi4-reasoning:14b   Ages       snap='<think>We are aske'   think='<think>We are aske'
+  phi4-reasoning:14b   Trains     snap='<think>We are aske'   think='<think>We are aske'
+  phi4-reasoning:14b   Handshakes snap='<think>We are aske'   think='<think>We are aske'
+phi4-reasoning:14b   snap 1/4  think 4/4  (no-think-trace, think total 120s)
+  gpt-oss:20b          Well       snap=''                     think='4'
+  gpt-oss:20b          Ages       snap=''                     think='12'
+  gpt-oss:20b          Trains     snap=''                     think='2'
+  gpt-oss:20b          Handshakes snap=''                     think='7'
+gpt-oss:20b          snap 0/4  think 4/4  (native-think, think total 28s)
+
+======================================================================
+VISION — transcribe images/mm/terminal.png; qwen3-vl & llava-phi3 vs llava
+======================================================================
+  llava:latest      28.8s -> 'The text in the image is a Python code snippet that reads:\n\n```python\nimport pygame\nfrom pygame.locals import *\n\n# Initi'
+  qwen3-vl:8b       72.7s -> 'python3 – 80×24\n$ python3 app.py\nTraceback (most recent call last):\nFile "app.py", line 42, in <module>\nresult = process'
+  llava-phi3:3.8b   76.6s -> 'python3 app.py Traceback (most recent call last): File "app.py", line 42, in <module> result = process_data(process_data'
+
+======================================================================
+GENERAL — one-sentence explain + strict-format follow; speed in seconds
+======================================================================
+  tinyllama:1.1b          1.5s explain -> 'A hash table is a data structure that maps keys (or "hash codes") to c'
+  tinyllama:1.1b              fmt     -> 'Sure! Here are the three fruits I mentioned earlier:\n\n1. App'
+  gemma3n:e4b             5.3s explain -> 'A hash table is a data structure that uses a hash function to compute '
+  gemma3n:e4b                 fmt     -> 'apple, banana, orange'
+  openhermes:v2.5         3.7s explain -> 'A hash table is a data structure that uses a hash function to store an'
+  openhermes:v2.5             fmt     -> 'apple, banana, orange'
+  lfm2:24b                7.5s explain -> 'A hash table is a data structure that stores key-value pairs in an arr'
+  lfm2:24b                    fmt     -> 'apple,banana,orange'
+  glm-4.7-flash:latest   10.8s explain -> 'A hash table is a data structure that maps keys to values using a hash'
+  glm-4.7-flash:latest        fmt     -> 'apple, banana, orange'
+
+DONE in 9.4 min

@@ -1,0 +1,193 @@
+# Back-of-book index terms for Programming Generative AI.
+#
+# One term per line:   pattern :: Key [:: slugs=a,b,c] [:: cs]
+#
+#   pattern  regex fragment, matched at word boundaries, case-insensitive
+#            unless "cs" is given
+#   Key      the index entry as it should appear in the book (defaults to the
+#            pattern text when omitted; use ! for makeindex subentries)
+#   slugs=   restrict the term to these chapter slugs (default: every chapter)
+#   cs       case-sensitive match (proper nouns that double as common words)
+#
+# build_pdf.py injects \index{Key} after the FIRST match per chapter, in prose
+# only (never inside verbatim blocks or LaTeX commands). A term that never
+# matches simply does not appear in the index, so speculative entries are safe.
+
+# ── Foundations / how models work ─────────────────────────────────────────────
+tokens? :: tokens
+tokeni[sz](e|ed|ation|er) :: tokenization
+byte[- ]pair encoding|\bBPE\b :: byte pair encoding (BPE)
+subwords? :: subword units :: slugs=tokens
+vocabular(y|ies) :: vocabulary :: slugs=tokens,semantics
+special tokens? :: special tokens :: slugs=tokens
+indentation :: indentation :: slugs=tokens
+context (window|length) :: context window
+next[- ]token prediction|predict(ing|s)? the next (token|word) :: next-token prediction
+auto-?regressive :: autoregressive generation
+transformers? :: transformer architecture
+(self-)?attention mechanism|attention heads?|multi-head attention :: attention
+neural networks? :: neural networks :: slugs=intro,semantics
+training data :: training data
+pre-?train(ing|ed) :: pretraining
+fine-?tun(ing|ed) :: fine-tuning
+RLHF|reinforcement learning from human feedback :: reinforcement learning from human feedback (RLHF)
+emergent (abilit|capabilit|behavio)\w*|emergence :: emergent abilities :: slugs=intro
+scaling laws? :: scaling laws
+stochastic parrots? :: stochastic parrot :: slugs=intro,responsible
+probability distribution :: probability distribution :: slugs=intro,prompting,tokens
+knowledge cutoff|training cutoff :: knowledge cutoff
+frontier models? :: frontier models :: slugs=intro,responsible
+open-?weights? :: open weights
+Ollama :: Ollama :: slugs=front,intro,thinking,efficiency
+Hugging ?Face :: Hugging Face
+LEGO :: LEGO analogy :: slugs=intro :: cs
+
+# ── Prompting ─────────────────────────────────────────────────────────────────
+temperature :: temperature
+top-k :: top-k sampling
+top-p :: top-p sampling
+sampling :: sampling :: slugs=prompting,thinking
+greedy (decoding|sampling) :: greedy decoding :: slugs=prompting
+determinis(m|tic) :: determinism :: slugs=prompting,thinking
+system prompts? :: system prompts
+personas? :: personas :: slugs=prompting
+zero[- ]shot :: zero-shot prompting
+one[- ]shot :: one-shot prompting
+few[- ]shot :: few-shot prompting
+in[- ]context learning :: in-context learning
+anatomy of a prompt :: prompt anatomy :: slugs=prompting
+pink elephant :: pink elephant problem
+negations? :: negation :: slugs=prompting
+chain[- ]of[- ]thought|\bCoT\b :: chain-of-thought prompting
+step[- ]back prompt(ing)? :: step-back prompting
+program[- ]aided :: program-aided language models (PAL)
+structured outputs? :: structured output :: slugs=prompting
+Snake :: Snake (game demo) :: slugs=prompting :: cs
+
+# ── Embeddings / semantics ────────────────────────────────────────────────────
+embeddings? :: embeddings
+word embeddings? :: embeddings!word
+sentence embeddings? :: embeddings!sentence
+code embeddings? :: embeddings!code
+distributional hypothesis :: distributional hypothesis
+cosine similarity :: cosine similarity
+Word2Vec :: Word2Vec
+skip-?gram :: skip-gram
+vector arithmetic :: vector arithmetic
+semantic search :: semantic search
+clustering :: clustering :: slugs=semantics
+bag[- ]of[- ]words :: bag of words :: slugs=semantics
+polysem(y|ous) :: polysemy :: slugs=semantics,metacoding
+\bPCA\b :: principal component analysis (PCA) :: slugs=semantics :: cs
+
+# ── Code and metacoding ───────────────────────────────────────────────────────
+code generation :: code generation
+semantic code search :: semantic code search
+operator flip :: operator flip (code semantics)
+syntax :: syntax :: slugs=metacoding,tokens
+semantics :: semantics :: slugs=metacoding,semantics
+unit tests? :: unit tests :: slugs=metacoding
+
+# ── Retrieval and augmentation ────────────────────────────────────────────────
+retrieval[- ]augmented generation|\bRAG\b :: retrieval-augmented generation (RAG)
+retrieval :: retrieval :: slugs=augmentation
+chunk(ing|s|ed)? :: chunking :: slugs=augmentation
+vector (database|store)s? :: vector database
+Chroma\b :: Chroma (vector database) :: slugs=augmentation :: cs
+rerank(ing|er|ers|ed)? :: reranking
+hybrid (retrieval|search) :: hybrid retrieval
+metadata filter(ing)? :: metadata filtering
+hypothetical document embeddings|\bHyDE\b :: hypothetical document embeddings (HyDE)
+query (expansion|rewriting) :: query rewriting and expansion
+corrective RAG|\bCRAG\b :: corrective RAG (CRAG)
+chain[- ]of[- ]verification|\bCoVe\b :: chain-of-verification (CoVe)
+grounded generation|grounding :: grounding
+hallucinat(e|ion|ions|ing|ed) :: hallucination
+document ingestion|ingestion pipeline :: document ingestion :: slugs=augmentation
+knowledge base :: knowledge base :: slugs=augmentation
+(retrieval )?precision and recall|retrieval precision :: precision and recall
+ground truth :: ground truth :: slugs=augmentation
+lost in the middle :: lost in the middle :: slugs=augmentation
+
+# ── Agents ────────────────────────────────────────────────────────────────────
+agents?|agentic :: agents
+tool call(s|ing)?|function calling :: tool use
+tool use :: tool use
+tool descriptions? :: tool descriptions :: slugs=agentic
+ReAct :: ReAct :: slugs=agentic,thinking :: cs
+memory stream :: memory stream :: slugs=agentic
+generative agents :: generative agents :: slugs=agentic
+Self-Refine :: Self-Refine :: cs
+Reflexion :: Reflexion :: cs
+self[- ]consistency :: self-consistency
+Voyager :: Voyager :: slugs=agentic :: cs
+skill librar(y|ies) :: skill library :: slugs=agentic
+world (model|state) :: world state :: slugs=agentic
+computer use :: computer use :: slugs=agentic
+self[- ]improvement :: self-improvement :: slugs=agentic
+sandbox(ing|ed)? :: sandboxing :: slugs=agentic,responsible,prompting
+guardrails? :: guardrails :: slugs=responsible
+observability :: observability :: slugs=agentic
+Sophia :: Sophia (study assistant) :: cs
+Model Context Protocol :: Model Context Protocol (MCP)
+
+# ── Thinking / reasoning ──────────────────────────────────────────────────────
+thinking models?|reasoning models? :: thinking models
+inference[- ]time (scaling|compute)|test[- ]time (scaling|compute) :: inference-time scaling
+memori[sz](ed|ation|e) :: memorization :: slugs=thinking,responsible,tokens
+
+# ── Multimodal ────────────────────────────────────────────────────────────────
+multi-?modal(ity)? :: multimodal models
+vision[- ]language models?|\bVLM\b :: vision-language models
+image generation|text-to-image :: image generation
+diffusion models?|latent diffusion|Stable Diffusion :: diffusion models
+speech recognition|speech-to-text|Whisper :: speech recognition
+optical character recognition|\bOCR\b :: optical character recognition (OCR)
+spatial reasoning :: spatial reasoning :: slugs=mm
+
+# ── Evaluation and deployment ──────────────────────────────────────────────────
+evaluation :: evaluation :: slugs=augmentation,metacoding
+benchmarks? :: benchmarks :: slugs=metacoding,thinking,agentic
+LLM[- ]as[- ]a?[- ]?judge|judge model :: LLM-as-judge
+pairwise (judg|compar)\w* :: pairwise judging
+position bias :: position bias
+verbosity bias :: verbosity bias
+sycophan(cy|t|tic) :: sycophancy
+human[- ]in[- ]the[- ]loop :: human-in-the-loop
+demo[- ]to[- ]production :: demo-to-production gap
+model routing|routing :: model routing :: slugs=efficiency,agentic
+overfitting :: overfitting
+
+# ── Efficiency ────────────────────────────────────────────────────────────────
+latency :: latency :: slugs=efficiency
+throughput|tokens per second :: throughput :: slugs=efficiency
+quanti[sz](e|ed|ation) :: quantization
+batch(ing|ed) :: batching :: slugs=efficiency
+prompt compression :: prompt compression
+compress(ing|ion) (the )?(context|history|prompts?) :: prompt compression
+context engineering :: context engineering
+KV cache|key-value cache :: KV cache :: slugs=efficiency
+inference :: inference :: slugs=efficiency
+
+# ── Responsibility, safety, privacy ───────────────────────────────────────────
+prompt injection :: prompt injection
+jailbreak(ing|s)? :: jailbreaking
+red[- ]team(ing)? :: red teaming
+data poisoning|poison(ing|ed) :: data poisoning :: slugs=responsible
+watermark(ing|s)? :: watermarking :: slugs=responsible
+moderation :: content moderation :: slugs=responsible
+alignment :: alignment :: slugs=responsible,agentic,intro
+privacy :: privacy :: slugs=responsible
+personally identifiable|\bPII\b :: personally identifiable information (PII)
+differential privacy :: differential privacy
+membership inference :: membership inference
+homomorphic encryption :: homomorphic encryption :: slugs=responsible
+access control :: access control :: slugs=responsible
+least privilege :: least privilege
+governance :: governance :: slugs=responsible
+GDPR :: GDPR
+AI Act :: EU AI Act
+NIST :: NIST AI Risk Management Framework :: cs
+OWASP :: OWASP :: cs
+fairness :: fairness :: slugs=responsible
+social bias(es)?|bias(es)? in (the )?(training )?data :: bias (fairness) :: slugs=responsible,intro

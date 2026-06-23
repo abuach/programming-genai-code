@@ -1,0 +1,35 @@
+reflexion bake-off  K=4 repeats=1 tasks=11
+
+  mistral:latest         blind  72.7%  reflexion  54.5%  (lift -18.2)
+  qwen3:latest           blind  54.5%  reflexion  72.7%  (lift +18.2)
+  gpt-oss:20b            blind  90.9%  reflexion 100.0%  (lift +9.1)
+  qwen2.5-coder:latest   blind  81.8%  reflexion  81.8%  (lift +0.0)
+  gemma4:latest          blind  81.8%  reflexion 100.0%  (lift +18.2)
+  phi4:14b               blind 100.0%  reflexion 100.0%  (lift +0.0)
+  lfm2:24b               blind  63.6%  reflexion  90.9%  (lift +27.3)
+  glm-4.7-flash:latest   blind  90.9%  reflexion  90.9%  (lift +0.0)
+  llama3.1:latest        blind  63.6%  reflexion  81.8%  (lift +18.2)
+  codellama:latest       blind  54.5%  reflexion  63.6%  (lift +9.1)
+  openhermes:v2.5        blind  72.7%  reflexion  72.7%  (lift +0.0)
+  ministral-3:latest     blind  81.8%  reflexion  81.8%  (lift +0.0)
+<string>:2: SyntaxWarning: invalid decimal literal
+  deepseek-coder:latest  blind  27.3%  reflexion  27.3%  (lift +0.0)
+  tinyllama:1.1b         blind   9.1%  reflexion  27.3%  (lift +18.2)
+
+REFLEXION_BAKEOFF = {
+    "mistral:latest":        {"blind":  72.7, "reflexion":  54.5},
+    "qwen3:latest":          {"blind":  54.5, "reflexion":  72.7},
+    "gpt-oss:20b":           {"blind":  90.9, "reflexion": 100.0},
+    "qwen2.5-coder:latest":  {"blind":  81.8, "reflexion":  81.8},
+    "gemma4:latest":         {"blind":  81.8, "reflexion": 100.0},
+    "phi4:14b":              {"blind": 100.0, "reflexion": 100.0},
+    "lfm2:24b":              {"blind":  63.6, "reflexion":  90.9},
+    "glm-4.7-flash:latest":  {"blind":  90.9, "reflexion":  90.9},
+    "llama3.1:latest":       {"blind":  63.6, "reflexion":  81.8},
+    "codellama:latest":      {"blind":  54.5, "reflexion":  63.6},
+    "openhermes:v2.5":       {"blind":  72.7, "reflexion":  72.7},
+    "ministral-3:latest":    {"blind":  81.8, "reflexion":  81.8},
+    "deepseek-coder:latest": {"blind":  27.3, "reflexion":  27.3},
+    "tinyllama:1.1b":        {"blind":   9.1, "reflexion":  27.3},
+}
+FULLRUN_EXIT=0

@@ -1,0 +1,25 @@
+====================================================================== 
+1. codeqwen:7b raw is_prime output
+ ======================================================================
+'```python\ndef isPrime(n):\n    if n < 2: return False\n    for i in range(2, int(n**0.5)+1):\n        if n % i == 0: return False\n    return True\n```'
+graded: (0, 12, 'KeyError')
+
+====================================================================== 
+2. aya:8b vs gemma4 on Aya-23 languages
+ ======================================================================
+  gemma4:latest  Turkish     -> 'Bu yıl hasat iyiydi, bu yüzden köy kutladı.'
+  gemma4:latest  Vietnamese  -> 'Mùa thu hoạch năm nay bội thu, nên cả làng đã tổ chức lễ kỷ niệm.'
+  gemma4:latest  Persian     -> 'امسال برداشت خوبی بود، بنابراین روستا جشن گرفت.'
+  gemma4:latest  Indonesian  -> 'Panen tahun ini bagus, jadi desa itu merayakannya.'
+  aya:8b         Turkish     -> '"Bu yıl mahsul iyiydi, bu yüzden köy kutladı."'
+  aya:8b         Vietnamese  -> '"Lũ lúa năm nay tốt nên làng đã tổ chức lễ hội."'
+  aya:8b         Persian     -> '"در این سال محصول خوبی داشتیم، بنابراین روستا جشن گرفت."'
+  aya:8b         Indonesian  -> '"Panen tahun ini bagus, jadi desa merayakannya."'
+
+====================================================================== 
+3. gpt-oss:20b reasoning effort low vs high
+ ======================================================================
+  effort=low    16.1s  answer='4'  reasoning_chars=629
+  effort=high   25.6s  answer='4'  reasoning_chars=2004
+
+FOLLOWUP DONE

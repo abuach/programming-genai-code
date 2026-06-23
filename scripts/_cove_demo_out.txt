@@ -1,0 +1,8 @@
+USER     Name the countries that share a land border with Portugal.
+gemma4   Spain, Morocco                      (2 listed, 50% right)
+VERIFY   each name re-checked alone, the draft hidden:
+USER     Does Portugal share a land border with Spain?
+gemma4   Yes. Portugal shares a significant land border with... keep
+USER     Does Portugal share a land border with Morocco?
+gemma4   No. Portugal is separated from Morocco by the Strait... drop
+REVISE   Spain                              (1 listed, 100% right)

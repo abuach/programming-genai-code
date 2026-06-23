@@ -1,0 +1,8 @@
+{
+ "label": "Compound",
+ "message": {
+  "thinking": "",
+  "content": "To determine the population of the town after 10 years given that it grows by 8 percent every year, we can use the formula for compound growth:\n\n\\[ P = P_0 \\times (1 + r)^n \\]\n\nwhere:\n- \\( P \\) is the future population,\n- \\( P_0 \\) is the initial population,\n- \\( r \\) is the annual growth rate,\n- \\( n \\) is the number of years.\n\nGiven:\n- Initial population, \\( P_0 = 1200 \\),\n- Annual growth rate, \\( r = 8\\% = 0.08 \\),\n- Number of years, \\( n = 10 \\).\n\nFirst, we substitute these values into the formula:\n\n\\[ P = 1200 \\times (1 + 0.08)^{10} \\]\n\nNext, calculate the value inside the parentheses:\n\n\\[ 1 + 0.08 = 1.08 \\]\n\nNow, raise 1.08 to the power of 10:\n\n\\[ 1.08^{10} \\approx 251.817 \\]\n\nFinally, multiply this result by the initial population:\n\n\\[ P \\approx 1200 \\times 251.817 = 30218.04 \\]\n\nRounding to the nearest whole person, we get:\n\nAnswer: 30218"
+ },
+ "val": 30218.0
+}

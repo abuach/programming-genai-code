@@ -1,0 +1,19 @@
+### MEMORY RECALL ###
+scoring 1 models as semantic librarians...
+
+MEMORY_RECALL_STUDY = {
+    "gpt-oss:20b": {"recall_pct": 100.0},
+}
+
+ranked:
+  gpt-oss:20b            100.0%  #########################
+
+### CONFIDENCE ###
+probing calibration on 1 models...
+
+CONFIDENCE_STUDY = {
+    "gpt-oss:20b": {"answerable": 5.00, "impossible": 2.20},
+}
+
+ranked by calibration gap (answerable - impossible):
+  gpt-oss:20b            answerable 5.00  impossible 2.20  (gap +2.80)

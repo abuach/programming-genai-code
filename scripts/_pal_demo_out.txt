@@ -1,0 +1,16 @@
+USER           | A town of 1200 people grows by 8 percent every year.
+               | How many people are there after 10 years, rounded to
+               | the nearest whole person?
+
+# Initialize variables
+initial_population = 1200
+growth_rate = 8 / 100  # Convert percentage to decimal
+years = 10
+# Calculate population after 10 years using compound interest formula
+answer = initial_population * (1 + growth_rate) ** years
+# Round the result to the nearest whole person
+answer = round(answer)
+# Print the final answer
+print(answer)
+
+PYTHON         | the program computes 2591  (correct)

@@ -1,0 +1,20 @@
+USER     Name the South American countries that share a land border
+         with Brazil.
+gemma4   Colombia, Venezuela, Guyana, Suriname, Paraguay, Bolivia,
+         Argentina                          (7 listed, 100% right)
+VERIFY   each name re-checked alone, the draft hidden:
+USER     Does Brazil share a land border with Colombia?
+gemma4   No. Brazil does not share a land border with...      drop
+USER     Does Brazil share a land border with Venezuela?
+gemma4   No. Brazil does not share a land border with...      drop
+USER     Does Brazil share a land border with Guyana?
+gemma4   No. Brazil does not share a land border with Guyana. drop
+USER     Does Brazil share a land border with Suriname?
+gemma4   No. Brazil does not share a land border with...      drop
+USER     Does Brazil share a land border with Paraguay?
+gemma4   Yes. Brazil shares a land border with Paraguay.      keep
+USER     Does Brazil share a land border with Bolivia?
+gemma4   No. Brazil does not share a land border with Bolivia. drop
+USER     Does Brazil share a land border with Argentina?
+gemma4   Yes. Brazil and Argentina share a long border in...  keep
+REVISE   Paraguay, Argentina                (2 listed, 100% right)

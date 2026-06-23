@@ -1,0 +1,41 @@
+[project]
+name = "programming-genai-code"
+version = "0.1.0"
+description = "Companion code for the book Programming Generative AI: the genai helper library and the scripts that reproduce its figures and transcripts."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.13"
+dependencies = [
+    "accelerate>=1.13.0",
+    "adjusttext>=1.3.0",
+    "cairosvg>=2.9.0",
+    "chess>=1.11.2",
+    "chromadb>=1.5.9",
+    "ddgs>=9.14.4",
+    "diffusers>=0.37.1",
+    "docutils~=0.20",
+    "ghp-import>=2.1.0",
+    "jupyter>=1.1.1",
+    "jupyter-book>=2.0.0a0",
+    "matplotlib>=3.10.7",
+    "mplfonts>=0.0.10",
+    "mystmd>=1.10.1",
+    "numpy>=2.3.4",
+    "ollama>=0.6.0",
+    "opentelemetry-exporter-otlp-proto-grpc>=1.40",
+    "pandas>=2.3.3",
+    "protobuf>=5",
+    "pydata-sphinx-theme>=0.13.3",
+    "scikit-learn>=1.8.0",
+    "seaborn>=0.13.2",
+    "sentence-transformers>=5.5.1",
+    "sentencepiece>=0.2.1",
+    "sphinx==7.0.1",
+    "sphinx-proof>=0.3.0",
+    "sphinxcontrib-bibtex==2.6.5",
+    "tiktoken>=0.12.0",
+    "torch>=2.9.0",
+    "torchaudio>=2.9.0",
+    "torchvision>=0.24.0",
+    "transformers>=4.57.1",
+]

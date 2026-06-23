@@ -1,0 +1,10 @@
+Is BERT an encoder or a decoder language model?
+RETRIEVE  ->  best of 3 local chunks, similarity 0.77
+              "Bidirectional encoder representations from transformers..."
+GRADE     ->  CORRECT: local docs look relevant, no web call needed
+REFINE    ->  kept 3 of 3 chunks (all on topic)
+ANSWER    ->  BERT is a bidirectional encoder representation from
+              transformers [1].
+SOURCES   ->  [1] Bidirectional encoder representations from...
+              [2] Natural language processing (NLP) is the processing...
+              [3] and architectures, such as the Transformer, or SGD....

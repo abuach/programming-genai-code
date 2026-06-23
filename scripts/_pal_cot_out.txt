@@ -1,0 +1,9 @@
+USER           | A town of 1200 people grows by 8 percent every year.
+               | How many people are there after 10 years, rounded to
+               | the nearest whole person?
+qwen2.5-coder  | To determine the population of the town after 10
+               | years given that it grows by 8 percent every year,
+               | we can use the …
+               | … [reasoning elided] …
+               | Answer: 30218
+GRADE          | lands on 30218, should be 2591  (wrong)

@@ -1,0 +1,30 @@
+# Ollama model baseline — captured 2026-06-21, before the new-model download.
+# Diff a fresh `ollama list` against this to find what's new.
+# 27 models installed at capture time.
+codellama:latest
+deepcoder:1.5b
+deepseek-coder:latest
+deepseek-r1:latest
+functiongemma:latest
+gemma3:1b
+gemma3:latest
+gemma4:26b
+gemma4:e2b
+gemma4:latest
+llama3.1:latest
+llama3.2:1b
+llama3.2:1b-instruct-fp16
+llama3.2:1b-instruct-q4_K_M
+llama3.2:1b-instruct-q8_0
+llama3.2:latest
+llava:latest
+ministral-3:latest
+mistral:latest
+nomic-embed-text:latest
+qwen2.5-coder:latest
+qwen3.5:0.8b
+qwen3.5:latest
+qwen3:0.6b
+qwen3:4b
+qwen3:latest
+starcoder2:latest

@@ -1,0 +1,20 @@
+probing tool-doc robustness on 7 models...
+
+TOOLDOC_STUDY = {
+    "gemma4:latest":        {"precise": 100.0, "vague": 100.0},
+    "qwen3:latest":         {"precise": 100.0, "vague":  50.0},
+    "qwen3.5:latest":       {"precise": 100.0, "vague":   0.0},
+    "mistral:latest":       {"precise":   0.0, "vague":   0.0},
+    "ministral-3:latest":   {"precise": 100.0, "vague":  50.0},
+    "llama3.1:latest":      {"precise":  83.3, "vague": 100.0},
+    "functiongemma:latest": {"precise": 100.0, "vague": 100.0},
+}
+
+ranked by vague-label call-rate (robustness):
+  gemma4:latest          precise 100.0%  vague 100.0%  (drop +0.0)
+  llama3.1:latest        precise  83.3%  vague 100.0%  (drop -16.7)
+  functiongemma:latest   precise 100.0%  vague 100.0%  (drop +0.0)
+  qwen3:latest           precise 100.0%  vague  50.0%  (drop +50.0)
+  ministral-3:latest     precise 100.0%  vague  50.0%  (drop +50.0)
+  qwen3.5:latest         precise 100.0%  vague   0.0%  (drop +100.0)
+  mistral:latest         precise   0.0%  vague   0.0%  (drop +0.0)

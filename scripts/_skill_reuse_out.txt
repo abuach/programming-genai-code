@@ -1,0 +1,34 @@
+scoring 14 models on skill reuse...
+
+SKILL_REUSE_STUDY = {
+    "qwen3:latest":          {"reuse_pct": 100.0},
+    "gpt-oss:20b":           {"reuse_pct": 100.0},
+    "lfm2:24b":              {"reuse_pct": 100.0},
+    "glm-4.7-flash:latest":  {"reuse_pct": 100.0},
+    "codellama:latest":      {"reuse_pct": 100.0},
+    "openhermes:v2.5":       {"reuse_pct": 100.0},
+    "mistral:latest":        {"reuse_pct":  66.7},
+    "qwen2.5-coder:latest":  {"reuse_pct":  66.7},
+    "gemma4:latest":         {"reuse_pct":  66.7},
+    "ministral-3:latest":    {"reuse_pct":  66.7},
+    "llama3.1:latest":       {"reuse_pct":  33.3},
+    "phi4:14b":              {"reuse_pct":   0.0},
+    "deepseek-coder:latest": {"reuse_pct":   0.0},
+    "tinyllama:1.1b":        {"reuse_pct":   0.0},
+}
+
+ranked:
+  qwen3:latest           100.0%  #########################
+  gpt-oss:20b            100.0%  #########################
+  lfm2:24b               100.0%  #########################
+  glm-4.7-flash:latest   100.0%  #########################
+  codellama:latest       100.0%  #########################
+  openhermes:v2.5        100.0%  #########################
+  mistral:latest          66.7%  #################
+  qwen2.5-coder:latest    66.7%  #################
+  gemma4:latest           66.7%  #################
+  ministral-3:latest      66.7%  #################
+  llama3.1:latest         33.3%  ########
+  phi4:14b                 0.0%  
+  deepseek-coder:latest    0.0%  
+  tinyllama:1.1b           0.0%  

@@ -1,0 +1,958 @@
+front:
+- ordinal: 1
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(robots)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: "a monochrome sketch
+    that looks like a group of friendly robot teachers".'
+  existing_alt: ''
+  alt: A black-and-white ink sketch of five friendly cartoon robots standing shoulder to shoulder in a
+    group, each with a rounded head, large round eyes, and small antennae.
+intro:
+- ordinal: 1
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(astronaut)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: "astronaut riding a dinosaur
+    through the desert into the sunset".'
+  existing_alt: ''
+  alt: A photorealistic render of an astronaut in a white spacesuit riding a tyrannosaurus rex across
+    desert sand dunes at sunset, the sun low on the horizon under an orange sky.
+- ordinal: 2
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(engineer)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: "a simple drawing that
+    conveys: the engineer of the future looks more like a sci-fi system architect giving planning instructions
+    to their attentive robot".'
+  existing_alt: ''
+  alt: A minimalist line drawing of a humanoid robot standing and gesturing toward a wall of floating
+    schematics, charts, and interface panels, as though directing a plan.
+- ordinal: 3
+  source: code
+  hint: fig, axes = plt.subplots(1, 2, figsize=(9, 4.5)) | ax.imshow(img)
+  caption: A jigsaw puzzle has one right answer decided before you begin; a box of LEGOs can become a
+    castle, a spaceship, or something nobody has built before. Discriminative AI solves the puzzle, generative
+    AI plays with the bricks. Both images generated with FLUX.1-schnell {cite}`flux2024schnell`.
+  existing_alt: ''
+  alt: Two side-by-side photographs. The left panel, labeled Jigsaw, shows several interlocking tan
+    cardboard jigsaw pieces fitted loosely together on a white background. The right panel, labeled LEGO,
+    shows an open box overflowing with brightly colored interlocking LEGO bricks.
+- ordinal: 4
+  source: code
+  hint: from genai.chess import first_move, show_chess | show_chess(fen, [
+  caption: 'One tricky position, three players: the full-size model, its small sibling, and a real engine.
+    The big model picks `Bxa5` with total confidence, and the move isn''t even legal.'
+  existing_alt: ''
+  alt: 'A chess board diagram of a mid-game position with most pieces still on the board. Three arrows
+    fan out from the bishop on c4: a red arrow to a5, which is occupied, marked illegal; an orange arrow
+    to b3, marked legal; and a green arrow to b5, marked legal and giving check. A legend below the board
+    maps red to illegal, orange to legal, and green to legal and giving check.'
+- ordinal: 5
+  source: code
+  hint: from genai.viz import plot_next_token | plot_next_token(prompt, dist, "images/foundations/next_token_washington.png")
+  caption: The next-token distribution for a prompt with one obvious continuation. About 95% of the probability
+    lands on "Washington", and no other city even shows up.
+  existing_alt: ''
+  alt: A horizontal bar chart titled 'The capital of the USA is ___'. Six candidate next tokens run down
+    the vertical axis and probability from 0 to 100 percent runs along the horizontal axis. A single blue
+    bar for 'Washington' reaches about 95 percent and dominates; the remaining gray bars, filler such as
+    'The' and an ellipsis, all sit under four percent, and no other city appears.
+- ordinal: 6
+  source: code
+  hint: from genai.viz import plot_two_step | plot_two_step(prompt, top_word, step1, step2, "images/foundations/next_token_two_step.png")
+  caption: The same model on an open-ended prompt, predicting two words in a row. In step one the favorite
+    "man" barely leads a crowded field; once it is locked in, step two snaps shut on "standing" at about
+    71%.
+  existing_alt: ''
+  alt: 'Two horizontal bar charts side by side in the same format. The left panel, titled ''She opened
+    the door and saw a ___'', shows a spread field where the leading token ''man'' in blue reaches only
+    18.3 percent, just ahead of ''small'' at 10.5, ''figure'' at 8.8, ''group'' at 4.0, and ''beautiful''
+    at 3.6, with no token clearly winning. The right panel, ''She opened the door and saw a man ___'',
+    collapses to a single tall blue bar for ''standing'' at about 71 percent, far ahead of an ellipsis
+    and ''who''.'
+- ordinal: 7
+  source: code
+  hint: from genai.viz import plot_attention | plot_attention([...], pronoun="it", path="images/foundations/attention_it.png")
+  caption: 'Attention from the word "it" to each earlier word, read from one head of a language model (BERT).
+    Swap a single word and the link flips: a tired "it" points back to the cat, a warm "it" points to the
+    laptop.'
+  existing_alt: ''
+  alt: 'Two stacked horizontal bar charts sharing one axis that measures how much attention the word ''it''
+    pays to each earlier word of a sentence. The top panel, titled ''The cat sat on the laptop because it
+    was tired.'', has one green bar for ''cat'' reaching about 0.43 that towers over every other word, with
+    ''laptop'' a distant second near 0.11. The bottom panel, ''The cat sat on the laptop because it was
+    warm.'', flips: now the green bar for ''laptop'' near 0.36 dominates while ''cat'' shrinks below 0.06.'
+prompting:
+- ordinal: 1
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(socrates)
+  caption: 'Image generated by AI (FLUX.1-schnell {cite}`flux2024schnell`). Prompt: "a weathered classical
+    marble bust of Socrates, the ancient Greek philosopher, on a plain pedestal, museum lighting, dark
+    neutral background, photorealistic". Socrates taught by asking, never by answering, which makes him
+    a fitting patron for a chapter about how the question you pose decides the answer you get.'
+  existing_alt: ''
+  alt: A weathered classical marble bust of a bearded Socrates on a marble pedestal, lit against a dark
+    neutral background.
+- ordinal: 2
+  source: code
+  hint: fig, axes = plt.subplots(1, 2, figsize=(11, 6)) | ax.imshow(img)
+  caption: 'Both panels generated with FLUX.1-schnell {cite}`flux2024schnell`. Left: the canonical Snake
+    a bare prompt returns. Right: the version you have to ask for. Prompts are in the cell above.'
+  existing_alt: ''
+  alt: Two game screenshots side by side. The left panel, labeled 'The default Snake', is a plain gray
+    grid holding a simple white snake and a small dark food dot. The right, labeled 'A Snake that's yours',
+    is a polished retro arcade scene with a score readout, clouds, and a green snake on a perspective
+    grid.
+- ordinal: 3
+  source: code
+  hint: from genai.viz import plot_sampling_controls | plot_sampling_controls(dist, k=3, p=0.9, n=5,
+  caption: 'One real next-token distribution under the two families of sampling controls: temperature
+    reshapes the odds, top-k and top-p trim the field.'
+  existing_alt: ''
+  alt: Two panels over the same five candidate tokens. Left, 'Temperature reshapes the odds', a line chart
+    where temperature 0.5 stays peaked and 1.5 flattens the spread. Right, 'Top-k and top-p trim the field',
+    a bar chart whose dashed marker shows top-k of 3 and top-p of 0.9 keeping the leading bars and cutting
+    the tail.
+- ordinal: 4
+  source: code
+  hint: from genai.viz import plot_temperature_lifecycle | plot_temperature_lifecycle()
+  caption: Recommended temperature across the phases of a software project. Open-ended phases like brainstorming
+    live in the warm band; implementation and debugging live in the cold one.
+  existing_alt: ''
+  alt: 'A line chart titled ''Temperature Across the Development Lifecycle'' tracking recommended temperature
+    across five phases: Brainstorm 0.9, Design 0.7, Implement 0.2, Generate Tests 0.6, and Debug 0.1.
+    A shaded upper band is labeled explore and a lower band labeled be consistent.'
+- ordinal: 5
+  source: code
+  hint: from genai.viz import plot_prompt_anatomy | plot_prompt_anatomy()
+  caption: 'One small classifier prompt with its seams showing: the instruction, the context, the examples,
+    and the output format.'
+  existing_alt: ''
+  alt: 'A diagram titled ''The Anatomy of a Prompt'' with four stacked colored rows: INSTRUCTION (''Sort
+    each support ticket by urgency''), CONTEXT (''Small team; P1 means a customer is fully blocked''),
+    OUTPUT FORMAT (''Reply with one word: high, medium, or low''), and EXAMPLES (a sample ticket mapped
+    to ''high'').'
+- ordinal: 6
+  source: code
+  hint: from genai.viz import plot_cot | plot_cot(COT_STUDY)
+  caption: Eight runs per model, cold versus chain of thought. The nudge rescues one model, sinks another,
+    and leaves two unchanged.
+  existing_alt: ''
+  alt: 'A grouped bar chart titled ''Chain of Thought Helps Some Models, Not Others'', comparing accuracy
+    without and with chain of thought over eight tries: qwen3 100 and 100, gemma4 50 and 50, mistral 0
+    then 75, llama3.2 12 then 0.'
+- ordinal: 7
+  source: code
+  hint: plot_step_back(STEP_BACK_STUDY)
+  caption: Eight cold answers against eight step-back answers on each problem. Naming the principle first
+    helps exactly where the principle is the missing piece, does nothing where it never was, and can even
+    hurt.
+  existing_alt: ''
+  alt: 'A grouped bar chart titled ''Step-Back Prompting'', comparing cold answers with step-back answers
+    over eight tries on five problems: Half 0 to 100, Pendulum 50 to 100, Pressure 0 to 50, Inverse 100
+    and 100, and Triple 100 down to 88.'
+- ordinal: 8
+  source: code
+  hint: plot_pal(PAL_STUDY)
+  caption: The same model solving the same problems in prose and in code, eight tries each. Three problems
+    jump to perfect when the arithmetic moves into the interpreter, one was already at the ceiling, and
+    the one the model mis-models stays wrong either way.
+  existing_alt: ''
+  alt: 'A grouped bar chart titled ''Program-Aided LMs'', comparing accuracy in prose versus as a program
+    over eight tries on five problems: Pages 50 to 100, Seats 25 to 100, Compound 25 to 100, Cuts 100
+    and 100, and Snail 12 to 38.'
+tokens:
+- ordinal: 1
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(kangaroo)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: "a monochrome illustration
+    of a kangaroo wearing a hoodie and sunglasses in front of the Sydney Opera House, holding a sign that
+    says Welcome Friends, minimalist editorial style", adapted from a signature demonstration in the Parti
+    paper {cite}`yu2022scaling`.'
+  existing_alt: ''
+  alt: A black-and-white illustration of a kangaroo wearing a hoodie and sunglasses, holding a sign that
+    reads 'Welcome Friends', with the Sydney Opera House in the background.
+- ordinal: 2
+  source: code
+  hint: from genai.viz import plot_spelling_survey | plot_spelling_survey(SPELLING_STUDY)
+  caption: Six tricky words down the rows, four models across the top, each cell one model's single answer.
+    Green marks a correct count and soft red a miss. The grid comes back mostly red.
+  existing_alt: ''
+  alt: A six-row by four-column grid titled 'Counting Letters the Tokenizer Hides'. Each row is a tricky
+    word such as strawberry or mississippi and each column is a model. Each cell is green for a correct
+    letter count or red for a miss, with the true count in the left column, and most cells are red.
+- ordinal: 3
+  source: code
+  hint: from genai import plot_token_pipeline | plot_token_pipeline()
+  caption: One word's journey from raw text through subword tokens to the integer IDs the model actually
+    reads.
+  existing_alt: ''
+  alt: 'A four-stage flow diagram titled ''From Text to Tokens to Numbers'': the raw text ''strawberry''
+    becomes the subword tokens ''str aw berry'', then the integer IDs 496, 675, 15717, and finally a box
+    labeled Language Model that sees only numbers, with arrows connecting the stages.'
+- ordinal: 4
+  source: code
+  hint: from genai import plot_token_boundaries | plot_token_boundaries(title="snake_case Through Two
+    Tokenizers")
+  caption: The same line through two tokenizers. The general-purpose tokenizer (above) keeps each underscore
+    attached to the word ahead of it, so the name spans eight tokens; the code-specialized StarCoder2
+    tokenizer (below) gives every underscore a token of its own, so the same name spans thirteen. They
+    diverge because each learned its merges from different training text.
+  existing_alt: ''
+  alt: A figure titled 'snake_case Through Two Tokenizers' showing two rows of colored token chips for
+    the same line of code, 'def get_user_by_id(user_id):'. The top row, labeled general, breaks it into
+    8 tokens, keeping each snake_case piece attached to a word. The bottom row, labeled code, breaks it
+    into 13 tokens, with a separate chip for every underscore.
+- ordinal: 5
+  source: code
+  hint: plot_token_boundaries(text="def getUserById(userId):", title="camelCase Through Two Tokenizers")
+  caption: The same function renamed in camelCase. With no underscores to break on, both tokenizers fold
+    the capital-letter humps into the same two pieces, getUser and ById, so their counts nearly match,
+    five and six. The one difference is that the code tokenizer splits the opening parenthesis off from
+    userId. The boundary moves with how the name is written, not only with the tokenizer.
+  existing_alt: ''
+  alt: A figure titled 'camelCase Through Two Tokenizers' showing two rows of colored token chips for
+    the same line of code, 'def getUserById(userId):'. The top row, labeled general, breaks it into 5
+    tokens; the bottom row, labeled code, breaks it into 6 tokens. Both keep getUser and ById intact,
+    and the only difference is that the code row gives the opening parenthesis its own chip.
+- ordinal: 6
+  source: code
+  hint: from genai import plot_special_tokens | plot_special_tokens()
+  caption: 'Every reserved control token in the code tokenizer, grouped by what it marks. Most label parts
+    of a software project rather than code itself: issue threads, pull requests, notebook cells, and redacted
+    secrets.'
+  existing_alt: ''
+  alt: A figure titled 'What 38 Special Tokens Reveal' showing the StarCoder2 code tokenizer's reserved
+    control tokens as colored chips grouped into eight labeled families. The families are document boundaries,
+    fill-in-the-middle, repository layout, issue threads, Jupyter notebooks, code transforms, sixteen
+    pull-request tokens, and four redacted-secret tokens for names, emails, keys, and passwords.
+semantics:
+- ordinal: 1
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(armchair)
+  caption: 'Image generated by AI (FLUX.1-schnell {cite}`flux2024schnell`). Prompt: "a monochrome illustration
+    of an armchair in the shape of an avocado, minimalist editorial style", adapted from the avocado armchair
+    demonstration in the original DALL-E paper {cite}`ramesh2021zeroshot`. When OpenAI introduced the
+    first DALL-E in early 2021, the avocado armchair became its signature image, evidence that the model
+    could fuse two unrelated ideas, a fruit and a piece of furniture, into a single object that had never
+    existed before.'
+  existing_alt: ''
+  alt: A black-and-white photograph of a single modern egg-shaped lounge chair with a patterned throw
+    cushion and thin metal legs, centered on a near-black background.
+- ordinal: 2
+  source: code
+  hint: from genai.viz import plot_cosine_angles | plot_cosine_angles()
+  caption: The three landmark angles of cosine similarity. Arrows pointing the same way score `+1`, perpendicular
+    arrows score `0`, and arrows pointing opposite ways score `-1`; every comparison lands somewhere on
+    that scale.
+  existing_alt: ''
+  alt: A three-panel diagram titled 'Cosine similarity is the angle between two vectors'. Same direction
+    shows two arrows pointing the same way, cosine plus 1; Right angle shows perpendicular arrows, cosine
+    0; Opposite shows arrows pointing away from each other, cosine minus 1.
+- ordinal: 3
+  source: code
+  hint: from genai.viz import plot_tsne_embeddings | plot_tsne_embeddings(word_groups)
+  caption: Real embedding vectors with hundreds of dimensions, flattened to two by t-SNE.
+  existing_alt: ''
+  alt: 'A scatter plot titled ''Real Word Embeddings: t-SNE Projection'' with four labeled, well-separated
+    clusters: animals (kitten, cat, dog, puppy, bird, fish), vehicles (car, bus, truck, motorcycle, bicycle),
+    fruits (apple, banana, cherry, grape, mango, orange), and code terms (java, javascript, python, code,
+    software, algorithm).'
+- ordinal: 4
+  source: code
+  hint: from genai.viz import plot_analogy_offsets | plot_analogy_offsets()
+  caption: Each relationship's step measured for two word pairs and drawn from a shared origin, separated
+    by the true angle between them. Gender and comparison hold their arrows in a cone, so a step lifted
+    from one pair still points roughly the right way at another. The opposite steps swing apart toward
+    a right angle, each word negating along its own attribute.
+  existing_alt: ''
+  alt: A three-panel diagram titled 'An analogy carries only when both pairs move along the same arrow'.
+    Each panel draws word-pair steps as arrows from a common origin. In 'Gender' (man to woman, king to
+    queen, actor to actress) and 'Comparative' (big to bigger, tall to taller, small to smaller) the arrows
+    stay inside a cone. In 'Opposite' (happy to sad, rich to poor, hot to cold) the arrows splay almost
+    to a right angle, beside a dashed line marked 90 degrees.
+- ordinal: 5
+  source: code
+  hint: from genai.viz import plot_gap_comparison | plot_gap_comparison()
+  caption: The related-minus-unrelated gap for each pair, scored both ways. Averaging packs every pair
+    into a short span high on the scale, so its gaps stay small; the transformer pulls related and unrelated
+    apart, so its lines run much longer.
+  existing_alt: ''
+  alt: A two-panel dumbbell chart titled 'The transformer opens a wider gap between related and unrelated
+    text'. Each row is a word pair (cat/feline, car/automobile, rain/downpour, ocean/sea, doctor/physician);
+    an orange dot marks the unrelated score and a blue dot the related score, joined by a line whose length
+    is the gap. The left panel 'Averaging word vectors' (mean gap 0.11) has short lines clustered between
+    0.8 and 1.0. The right panel 'Transformer' (mean gap 0.35) has long lines spanning roughly 0.4 to
+    0.9.
+- ordinal: 6
+  source: code
+  hint: from genai import plot_crosslingual, CROSSLINGUAL_STUDY | plot_crosslingual(CROSSLINGUAL_STUDY)
+  caption: Cosine between an English sentence and its translation, traced by two multilingual embedders
+    across languages, with the unrelated-sentence control drawn as the shaded floor band. Both stay high
+    across the well-resourced languages, embeddinggemma above, then fall off together at Swahili, where
+    v2-moe lands right on the floor.
+  existing_alt: ''
+  alt: A line chart titled 'Does Meaning Survive Translation?' tracing cosine to an English sentence for
+    five translations under two multilingual embedders, with a shaded floor band near 0.20 marking the
+    unrelated-sentence control. embeddinggemma runs above nomic-embed-text-v2-moe across the
+    well-resourced languages (German 0.92 versus 0.81, French 0.86 versus 0.72, Chinese 0.82 versus 0.61,
+    Spanish 0.82 versus 0.58), then both lines plunge at Swahili (0.38 and 0.22), where v2-moe lands on the
+    floor band and embeddinggemma stays above it.
+metacoding:
+- ordinal: 1
+  source: code
+  hint: display(img)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: \"photorealistic technical
+    pencil drawing of machines building other machines, robotic arms on a factory floor assembling robot
+    bodies, intricate mechanical detail, cinematic industrial lighting, monochrome\".'
+  existing_alt: ''
+  alt: A loose pencil sketch of several humanoid robots working at benches in an industrial workshop,
+    assembling and tinkering with machinery.
+- ordinal: 2
+  source: code
+  hint: from genai.viz import plot_code_embeddings | plot_code_embeddings()
+  caption: Small Python functions embedded with UniXcoder. The file I/O functions land far from everything
+    else, pulled together by the structural pattern they share.
+  existing_alt: ''
+  alt: 'A scatter plot titled ''Code Embeddings in 2D'' placing 15 function names colored by category:
+    arithmetic, strings, lists, and file I/O. Functions of the same category sit near each other, and
+    the three file I/O functions (read_file, write_file, log_error) form a separate cluster on the right.'
+- ordinal: 3
+  source: code
+  hint: render_code_listing([SUM_ITER, SUM_FAST, MULTIPLY_ITER])
+  caption: 'Three functions for the syntax-versus-semantics test: an iterative sum, a one-line sum, and
+    an iterative product.'
+  existing_alt: ''
+  alt: 'A syntax-highlighted Python code listing of three functions: sum_list adds a list of numbers with
+    a loop, add_up returns the built-in sum of a list, and multiply_list multiplies the numbers with a
+    loop. The first two reach the same result by different syntax, while the third copies sum_list''s
+    shape but does different work.'
+- ordinal: 4
+  source: code
+  hint: render_code_listing([ADD_NUMBERS, *ADD_VARIANTS.values()])
+  caption: 'An add_numbers original and four edits: two cosmetic (renamed variables, added type hints)
+    and two that change the work (a different operation, an unrelated function).'
+  existing_alt: ''
+  alt: 'A syntax-highlighted Python code listing of an original add_numbers function and four variants:
+    one with renamed parameters, one with type hints added, one that multiplies instead of adding, and
+    an unrelated send_email function. The first two changes are cosmetic; the last two change what the
+    code does.'
+- ordinal: 5
+  source: code
+  hint: render_code_listing([VALIDATE_PASS, VALIDATE_FAIL])
+  caption: Two validate_age functions a single operator apart.
+  existing_alt: ''
+  alt: 'A syntax-highlighted Python code listing of two validate_age functions that differ by one operator:
+    the first returns whether age is greater than or equal to 21, the second whether age is less than
+    21, so they accept opposite groups of ages.'
+- ordinal: 6
+  source: code
+  hint: render_code_columns([left, right])
+  caption: 'The analogy dataset: two recursive-to-iterative worked pairs, a new recursive fact_rec to
+    transform, and two candidate answers.'
+  existing_alt: ''
+  alt: 'A two-column syntax-highlighted Python code listing arranged as an analogy task. The left column
+    holds two worked recursive-to-iterative pairs, sum_rec with sum_iter and count_rec with count_iter.
+    The right column holds a new recursive fact_rec to transform and two candidate answers: the iterative
+    factorial fact_iter and an unrelated recursive fibonacci.'
+- ordinal: 7
+  source: code
+  hint: render_code_listing(DISAGREE_FUNCS)
+  caption: The five candidate functions, scored against "combine two numbers" by all three code embedders.
+  existing_alt: ''
+  alt: 'A syntax-highlighted Python code listing of the five candidate functions scored in the search
+    demo: add, multiply, sum_list, read_file, and send_email.'
+- ordinal: 8
+  source: code
+  hint: from genai.viz import plot_search_comparison | plot_search_comparison(search_results)
+  caption: 'The three embedders'' scores as bars: CodeBERT''s stay uniformly high across every function,
+    while CodeSearch''s fan out to separate the relevant functions from the rest.'
+  existing_alt: ''
+  alt: A grouped bar chart titled 'Three code embedders score combine two numbers' comparing UniXcoder,
+    CodeBERT, and CodeSearch on similarity to the query across the functions add, multiply, sum_list,
+    read_file, and send_email. CodeBERT scores everything uniformly high near 0.8, including the irrelevant
+    functions; UniXcoder stays low around 0.1 to 0.3; CodeSearch separates them best, scoring arithmetic
+    add and multiply highest near 0.5 and dropping below zero for read_file.
+- ordinal: 9
+  source: code
+  hint: from genai.viz import plot_model_speed | plot_model_speed(bench)
+  caption: Generation speed across five local code models. The smallest runs roughly six times faster
+    than the largest.
+  existing_alt: ''
+  alt: 'A horizontal bar chart titled ''Coding Model Speed (local, Apple Silicon)'' in tokens per second:
+    DeepSeek-Coder 111, DeepCoder 68, StarCoder2 52, CodeLlama 26, Qwen2.5-Coder 18, color-banded into
+    fast, medium, and slow tiers.'
+- ordinal: 10
+  source: code
+  hint: from genai.viz import plot_size_vs_speed | plot_size_vs_speed(bench)
+  caption: 'Model size against generation speed. Not a perfectly straight line, but the direction never
+    changes: more parameters, more latency.'
+  existing_alt: ''
+  alt: A scatter plot titled 'Smaller Models Generate Faster' with model size in billions of parameters
+    on the x-axis and tokens per second on the y-axis. The smallest models (DeepSeek-Coder and DeepCoder
+    near 1.5 billion) sit highest, and speed falls as size grows toward CodeLlama and Qwen2.5-Coder above
+    7 billion.
+- ordinal: 11
+  source: code
+  hint: from genai import plot_code_scorecard | plot_code_scorecard(grid)
+  caption: 'Each square is the share of three small tasks a model solved in that category, from red (none)
+    to green (all). The colour rarely holds across a row: the models that stumble on the left half often
+    sweep the right.'
+  existing_alt: ''
+  alt: 'A heatmap titled ''Code zoo scorecard: small tasks solved per category, by model'' with eight
+    models in rows and five task categories in columns, split into Instruction (strings, math, lists)
+    and Fill-in-the-Middle (loops, build). Each cell shows tasks solved out of three, shaded red through
+    orange and yellow to green. Qwen2.5-Coder is green across; CodeQwen, OpenCoder and Magicoder are strong
+    on the instruction half but red or gray on fill-in-the-middle; StarCoder2 and Stable-Code are the
+    reverse, weak on instructions but green on the fill columns; CodeLlama is green except a red strings
+    cell.'
+augmentation:
+- ordinal: 1
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(shiba)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: "a monochrome illustration
+    of a shiba inu dog wearing a beret and black turtleneck, black and white ink drawing, minimalist editorial
+    style", adapted from a signature DALL-E 2 demonstration {cite}`ramesh2022hierarchical`.'
+  existing_alt: ''
+  alt: A stylized illustration of a Shiba Inu dog wearing a flat cap and a black turtleneck sweater, against
+    a gray background.
+- ordinal: 2
+  source: code
+  hint: from genai.viz import plot_rag_pipeline | plot_rag_pipeline()
+  caption: The retrieval-augmented generation pipeline we build in this chapter. Documents are chunked
+    and embedded once; every question then retrieves its best chunks and hands them to the model as grounded
+    context.
+  existing_alt: ''
+  alt: A two-row pipeline diagram titled 'Retrieval-Augmented Generation Pipeline'. The Indexing Phase
+    runs Raw Docs, Clean and Chunk, Embed, Vector Index; the Query Phase runs User Query, Retrieve Top-K,
+    Context plus Prompt, Generate, Cited Answer; an arrow labeled 'retrieves from' links the vector index
+    to the retrieve step.
+- ordinal: 3
+  source: code
+  hint: from genai.viz import plot_context | plot_context(CONTEXT_STUDY)
+  caption: One fact planted in about eight thousand tokens of filler, near the edges or buried in the
+    middle. Only `llama3.1` keeps its grip in the middle.
+  existing_alt: ''
+  alt: A grouped bar chart titled 'Lost in the Middle?' comparing recall when a fact sits at the edges
+    versus the middle of the context. Only llama3.1 holds the middle at 50 percent; every other model
+    drops to 0 when the fact is buried.
+- ordinal: 4
+  source: code
+  hint: from genai.viz import plot_retrieval_comparison | plot_retrieval_comparison(labels, dense_s, sparse_s,
+    hybrid_s, k=K_EVAL)
+  caption: Dense, sparse, and hybrid retrieval scored on the same questions over our Wikipedia corpus.
+    No strategy wins every query, which is why hybrid search exists.
+  existing_alt: ''
+  alt: 'A grouped bar chart titled ''Dense vs. Sparse vs. Hybrid Retrieval: Precision@3'' over three queries.
+    For Transformers, dense and hybrid reach 0.67 and sparse 0.33; for Backprop all three are 0.33; for
+    Diffusion there are no matches.'
+- ordinal: 5
+  source: code
+  hint: from genai.viz import plot_index_speed | plot_index_speed(INDEX_SPEED_STUDY)
+  caption: One nearest-neighbor search as the corpus grows, timed for a naive linear scan and for Chroma's
+    HNSW index. The scan's cost climbs with the passage count while the index stays nearly flat.
+  existing_alt: ''
+  alt: A line chart titled 'Linear Scan vs. Indexed Search' plotting time for one search in milliseconds
+    against corpus size. The naive linear scan in orange climbs from about 1 millisecond at 500 passages
+    to 282 at 100,000, while Chroma's HNSW index in blue stays near 1 to 2 milliseconds throughout, ending
+    119 times faster.
+- ordinal: 6
+  source: code
+  hint: from genai import plot_crag, CRAG_STUDY | plot_crag(CRAG_STUDY)
+  caption: Standard RAG against corrective RAG, five tries per question, graded deterministically against
+    known facts. On the local questions the two tie; on the two trap questions the web fallback rescues
+    corrective RAG from zero to perfect.
+  existing_alt: ''
+  alt: A grouped bar chart titled 'Corrective RAG' comparing standard and corrective RAG on five topics,
+    the percent of five answers carrying the correct fact. Both score 100 on CNN, BERT, and Embedding;
+    on Nobel '24 and Olympics, standard RAG drops to 0 while corrective RAG recovers to 100.
+- ordinal: 7
+  source: code
+  hint: from genai import plot_cove, COVE_STUDY | plot_cove(COVE_STUDY)
+  caption: Draft answers against verified answers, twelve drafts per question, scored on precision and
+    recall. Verification reliably cleans up what the model lists, and on one question it also throws away
+    five answers that were right.
+  existing_alt: ''
+  alt: 'Two panels titled ''Chain-of-Verification'', comparing a draft answer with the answer after verification
+    over twelve tries. Left, precision (are the listed items correct): Portugal 75 to 100, Mexico 90 to
+    100, Brazil 100 and 100. Right, recall (did we keep the correct ones): Portugal and Mexico hold near
+    90 to 100, but Brazil drops from 62 to 20.'
+agentic:
+- ordinal: 1
+  source: code
+  hint: from genai.viz import plot_agentic_loop | plot_agentic_loop()
+  caption: The agentic loop. The model decides, acts through a tool, observes what happened, and goes
+    again until the goal is met or something breaks silently.
+  existing_alt: ''
+  alt: A cycle diagram titled 'The Agentic Loop'. A Goal feeds into Plan (Planner), which leads to Act
+    (Executor), then World (State), then Observe, then a 'Goal met?' check; a dashed arrow labeled 'not
+    yet' loops back to Plan.
+- ordinal: 2
+  source: code
+  hint: from genai.viz import plot_agent_landscape | plot_agent_landscape()
+  caption: A few landmarks on the road to modern agents, from reasoning-and-acting loops to models that
+    teach themselves tools to agents that play open-endedly.
+  existing_alt: ''
+  alt: 'A horizontal timeline titled ''Five Years of Agent Research, One Capability at a Time'', from
+    2022 to 2025: ReAct (reason and act), Toolformer and Gorilla (tool use), Generative Agents (memory),
+    AutoGen and MetaGPT (teams of agents), SWE-agent and Computer Use (acting in the world), and MCP and
+    research agents (standardize and scale).'
+- ordinal: 3
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(tools_img)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: "a charcoal/graphite
+    illustration of a long robot mechanical arm being tested in a futuristic lab".'
+  existing_alt: ''
+  alt: A pencil sketch of a long robotic arm extending down an industrial corridor lined with equipment.
+- ordinal: 4
+  source: code
+  hint: from genai.viz import plot_tool_bench | plot_tool_bench(AGENT_BENCH)
+  caption: Eight tool-calling prompts per candidate, scored on accuracy and speed. Only one model is perfect
+    this time, so the audition needs no tiebreak.
+  existing_alt: ''
+  alt: 'Two panels titled ''Tool-Calling Model Comparison''. Left, tool-call accuracy: gemma4 leads at 100
+    percent, llama3.1 and gpt-oss tie at 75 percent, down to mistral at 38 percent. Right, average latency
+    per call: functiongemma is fastest at 0.5 seconds and gpt-oss is by far the slowest at 14.4 seconds.'
+- ordinal: 5
+  source: code
+  hint: from genai.viz import plot_tool_identity | plot_tool_identity(TOOL_IDENTITY_STUDY)
+  caption: Every model's call-rate across the four label conditions, from both labels clear (left) to both
+    vague (right). The two middle columns, where only one label is clear, are where the field splits, with
+    the models near the top reaching for the tool on the name alone and the ones near the bottom on the
+    description alone.
+  existing_alt: ''
+  alt: 'A heatmap titled ''Which Label Does Each Model Read?'' with eight models as rows and four tool-label
+    conditions as columns: both labels clear, name only, description only, both vague. Cells run green for
+    a high tool call-rate to red for a low one. The both-clear column is almost all green and the both-vague
+    column almost all red. In the two middle columns the field splits: llama3.1 and qwen3 are green under
+    name only and red under description only, while qwen3.5, ministral-3, and gpt-oss are the reverse; gemma4
+    is green in both, functiongemma calls in nearly all, and mistral never calls.'
+- ordinal: 6
+  source: code
+  hint: from genai.viz import plot_tool_identity_summary | plot_tool_identity_summary(TOOL_IDENTITY_STUDY)
+  caption: The four conditions averaged across all eight models. Both labels clear and the tool gets called;
+    both vague and it gets ignored; either one clear on its own keeps it alive.
+  existing_alt: ''
+  alt: 'A two-by-two heatmap titled ''Both Labels Matter: How Often the Model Reaches for the Tool'', averaging
+    all eight models, with tool name (clear or vague) on the rows and tool description (clear or vague) on
+    the columns. Both labels clear is green at 85 percent; a clear name with a vague description is 47 percent;
+    a vague name with a clear description is 60 percent; both vague is red at 5 percent.'
+- ordinal: 7
+  source: code
+  hint: from genai.viz import plot_reflexion_bakeoff | plot_reflexion_bakeoff(REFLEXION_STUDY)
+  caption: Blind retry against reflection across the field on the eleven gotcha tasks. Most models gain
+    from reading their own notes, a few are unmoved, and one ends up worse off.
+  existing_alt: ''
+  alt: A grouped bar chart titled 'Who Learns From Their Own Mistakes?' comparing blind retry with reflexion
+    across sixteen models on eleven gotcha tasks. lfm2 gains the most, from 64 to 91, while gemma4, gpt-oss
+    and qwen3.5 reach 100; phi4 is unchanged at 100 and several models stay flat; functiongemma sits at zero;
+    mistral drops from 73 to 54.
+- ordinal: 8
+  source: code
+  hint: from genai.viz import plot_scoreboard | plot_scoreboard(MEMORY_RECALL_STUDY, "recall_pct",
+  caption: Seven filed reader notes and six questions per model, each pointing at one note in different
+    words. Some models are flawless librarians; others shelve the note and never find it again.
+  existing_alt: ''
+  alt: 'A bar chart titled ''Which Model Is the Best Librarian?'' ranking recall accuracy: qwen3 and gpt-oss
+    at 100; gemma4, qwen3.5, and ministral-3 at 83; llama3.1 33; mistral 17; functiongemma 0.'
+- ordinal: 9
+  source: code
+  hint: from genai.viz import plot_confidence | plot_confidence(CONFIDENCE_STUDY)
+  caption: Self-rated confidence on answerable questions against impossible ones. The capable models rate
+    the impossible ones lower, which is what makes a low score worth acting on.
+  existing_alt: ''
+  alt: A grouped bar chart titled 'Who Knows What They Don't Know?' showing mean self-confidence from 1
+    to 5 on answerable versus impossible questions. Most models report lower confidence on the impossible
+    ones, and gpt-oss opens the widest gap at 5.0 versus 2.2, but llama3.1 and functiongemma stay equally
+    confident on both.
+- ordinal: 10
+  source: code
+  hint: from genai.viz import plot_dispatch | plot_dispatch(ROUTER_PICKS, ROUTING_TASKS)
+  caption: Eight models routing all twelve tasks, each pick scored against the golden tier as under-routed, correct,
+    or over-routed. gemma4:latest is the best dispatcher; functiongemma over-routes everything, gpt-oss under-routes
+    everything.
+  existing_alt: ''
+  alt: A horizontal stacked bar chart titled 'The dispatcher contest, scored against the golden routing'. Eight
+    models each route twelve tasks, every pick scored against the golden tier as under-routed (too weak, the task
+    fails), correct, or over-routed (too big, wasteful). gemma4:latest leads with 10 correct and 2 under-routed;
+    ministral-3 has 8 correct, qwen3.5 has 7, and llama3.1, mistral, and qwen3 each have 6. functiongemma is the
+    only over-router, with 4 correct and 8 over-routed; gpt-oss is the worst, with 4 correct and 8 under-routed.
+- ordinal: 11
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(diner_img)
+  caption: Image generated by AI (FLUX.1-schnell {cite}`flux2024schnell`), a robot couple dining beneath the Eiffel
+    Tower.
+  existing_alt: ''
+  alt: A black and white ink illustration of a robot couple at a candlelit restaurant table, dining with the Eiffel
+    Tower in the background, in a minimalist editorial style.
+- ordinal: 12
+  source: code
+  hint: from genai.viz import plot_scoreboard | plot_scoreboard(SKILL_REUSE_STUDY, "reuse_pct",
+  caption: Handed a ready-made helper, does the model call it or reinvent the logic inline? Reaching for the helper
+    turns out to be a matter of disposition, not coding strength.
+  existing_alt: ''
+  alt: 'A ranked bar chart titled ''Who Reuses a Skill vs Reinvents It?'' showing, for sixteen models, the
+    percent of tasks where a stored skill was reused and passed. Seven models tie at 100 (qwen3, gpt-oss, lfm2,
+    glm-4.7-flash, codellama, openhermes, qwen3.5); mistral, qwen2.5-coder, gemma4, and ministral-3 sit at 67;
+    llama3.1 at 33; and phi4, deepseek-coder, tinyllama, and functiongemma at 0.'
+- ordinal: 13
+  source: code
+  hint: from genai.viz import plot_casting_summary | plot_casting_summary(casting_summary())
+  caption: 'Every audition in this chapter on a single card: each column keeps its own
+    section''s yardstick, shaded against the field, with the best score in each column starred. No row sweeps
+    the board.'
+  existing_alt: ''
+  alt: 'A heatmap table titled ''Who Won What? The Season on One Card'' scoring eight models down the rows against
+    seven capabilities across the columns: tool calling, vague docs, reflection gain, memory recall, calibration,
+    routing, and skill reuse. Darker cells and stars mark each column''s best; no single model wins every capability.'
+thinking:
+- ordinal: 1
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(robot)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: "a monochrome illustration
+    of a robot sitting in a chair, deep in thought".'
+  existing_alt: ''
+  alt: A black-and-white illustration of a humanoid robot sitting back in an armchair with one hand raised
+    to its chin in a thinking pose.
+- ordinal: 2
+  source: code
+  hint: plot_thinking_accuracy(labels, std, thk, runs=3)
+  caption: A standard model against a thinking model on novel problems, three runs each. They tie wherever
+    a snap answer happens to be right; the trap problems punish only the snap answers.
+  existing_alt: ''
+  alt: 'A grouped bar chart titled ''Novel Multi-Step Problems: Snap Answers vs Thinking'' over four problems.
+    Snapping straight to an answer scores 0 on Well and 67 on Ages, while thinking first reaches 100 on
+    both; Trains and Handshakes are already 100 either way.'
+- ordinal: 3
+  source: code
+  hint: plot_thinking_accuracy(PHI4_REASONING_STUDY["labels"], PHI4_REASONING_STUDY["base"], PHI4_REASONING_STUDY["reasoning"],
+    runs=3)
+  caption: The same 14B base, with and without reasoning fine-tuning, on the four novel problems. The
+    two coincide only on Ages, where a direct answer already lands; on every multi-step problem the reasoning-tuned
+    variant pulls ahead.
+  existing_alt: ''
+  alt: A grouped bar chart titled 'Same Base Model, With and Without Reasoning Training' comparing accuracy
+    over three runs on four problems. Phi-4 base scores 0 on Well, 100 on Ages, 67 on Trains, and 67 on
+    Handshakes; Phi-4-reasoning reaches 100 on all four.
+- ordinal: 4
+  source: code
+  hint: plot_thinking_latency(rows)
+  caption: The price of all that deliberation. The thinking model is dozens of times slower, and it mulls
+    an easy question about as long as a hard one.
+  existing_alt: ''
+  alt: A grouped bar chart titled 'Thinking Is Far Slower, Easy Question or Hard' comparing time to answer.
+    On 'Capital of Japan' the standard model takes 0.5 seconds versus the thinking model's 54.8; on 'Snail
+    in a Well' it is 0.9 versus 48.6 seconds.
+- ordinal: 5
+  source: code
+  hint: plot_self_consistency(SELF_CONSISTENCY_STUDY)
+  caption: Accuracy as the vote grows from one sample to seven. Voting steadily sharpens the problems
+    the model already leans right on, and can't rescue the one where it's lost.
+  existing_alt: ''
+  alt: 'A line chart titled ''Thinking Wider: Voting Helps Only Where the Model Wobbles'', accuracy against
+    the number of reasoning chains sampled then voted (1, 3, 5, 7). Trains stays flat at 100 percent;
+    Ages and Handshakes climb steadily; Well stays low near 35 to 40 percent.'
+- ordinal: 6
+  source: code
+  hint: plot_pal(PAL_STUDY)
+  caption: The same model solving the same problems in prose and in code, eight tries each. Three problems
+    jump to perfect when the arithmetic moves into the interpreter.
+  existing_alt: ''
+  alt: 'A grouped bar chart titled ''Program-Aided LMs: Let the Interpreter Do the Arithmetic'' comparing
+    one model''s accuracy over eight tries answering in prose versus as a program, across five word problems.
+    Writing a program lifts Pages from 50 to 100 percent, Seats and Compound from 25 to 100, leaves Cuts
+    at 100 either way, and raises the hard Snail problem from 12 to 38.'
+mm:
+- ordinal: 1
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(galaxy)
+  caption: 'Image generated by AI (FLUX.1-schnell {cite}`flux2024schnell`). Prompt: "a deep space galaxy view, scattered
+    bright stars connected by thin faint constellation lines that vaguely trace the outline of a human eye, swirling
+    nebula clouds, dark cosmic background, astronomical star chart illustration, high contrast, mostly black and
+    white with subtle blue glow". An eye that resolves out of scattered points of light, much as a vision model
+    assembles a picture from a grid of separate pixels.'
+  existing_alt: ''
+  alt: A dark deep-space nebula in which glowing clouds and scattered stars loop around a round black void at the
+    center, the whole composition vaguely forming a giant eye.
+- ordinal: 2
+  source: figure
+  hint: images/mm/great_wave.jpg
+  caption: ''
+  existing_alt: ''
+  alt: 'Hokusai''s woodblock print ''The Great Wave off Kanagawa'': a giant blue wave with clawing white
+    foam towers over small boats, with Mount Fuji small in the distance.'
+- ordinal: 3
+  source: figure
+  hint: images/mm/saturn.jpg
+  caption: ''
+  existing_alt: ''
+  alt: A photograph of the planet Saturn, its pale gold banded disk encircled by the broad ring system,
+    against the black of space.
+- ordinal: 4
+  source: figure
+  hint: images/mm/mandrill.jpg
+  caption: ''
+  existing_alt: ''
+  alt: A wildlife photograph of a mandrill seated on rocks, its face marked by a bright red nasal stripe
+    flanked by ridged blue cheeks, with a golden beard.
+- ordinal: 5
+  source: figure
+  hint: images/mm/einstein_chalkboard.jpg
+  caption: ''
+  existing_alt: ''
+  alt: A vintage sepia photograph of Albert Einstein standing beside a chalkboard, holding a piece of
+    chalk, in a suit and tie.
+- ordinal: 6
+  source: figure
+  hint: images/mm/chess.jpg
+  caption: ''
+  existing_alt: ''
+  alt: A close-up photograph of plastic chess pieces grouped on a board, including a white king, a black
+    queen, a black rook, a black knight, and white pawns and bishop, against a dark red background.
+- ordinal: 7
+  source: figure
+  hint: images/mm/shapes_row.png
+  caption: ''
+  existing_alt: ''
+  alt: A row of five solid circles outlined in black on a white background, colored from left to right
+    red, green, blue, orange, and purple.
+- ordinal: 8
+  source: figure
+  hint: images/mm/mnist_grid.png
+  caption: ''
+  existing_alt: ''
+  alt: 'A 5 by 5 grid titled ''gemma4 reads MNIST: 22 of 25 correct'', showing handwritten digits each
+    framed green for a correct reading or red for a misread; three red cells mark where the model read
+    a 5, an 8, and a 9 as other digits.'
+- ordinal: 9
+  source: figure
+  hint: images/mm/text_handwriting.png
+  caption: ''
+  existing_alt: ''
+  alt: The phrase 'the model reads my handwriting' rendered twice in flowing cursive, once in a neat italic
+    and once in a larger, more ornate calligraphic hand.
+- ordinal: 10
+  source: figure
+  hint: images/mm/terminal_small.png
+  caption: ''
+  existing_alt: ''
+  alt: A small, low-resolution screenshot of a terminal running python3 app.py and printing a Python traceback
+    that ends in a KeyError on 'key'; the text is blurred and hard to read.
+- ordinal: 11
+  source: figure
+  hint: images/mm/terminal.png
+  caption: ''
+  existing_alt: ''
+  alt: A crisp, high-resolution screenshot of the same terminal. It clearly shows python3 app.py raising
+    a Python traceback through process_data and a groupby call, ending in KeyError on 'key'.
+- ordinal: 12
+  source: figure
+  hint: images/mm/flowchart.png
+  caption: ''
+  existing_alt: ''
+  alt: A decision flowchart titled 'API Request Handling'. A request is checked for a valid JWT (no leads
+    to 401 Unauthorized), then rate limit (yes leads to 429 Too Many Requests), then cache hit (yes returns
+    a cached response); otherwise it queries the database, stores in cache, and returns 200 OK.
+- ordinal: 13
+  source: figure
+  hint: images/mm/wireframe.png
+  caption: ''
+  existing_alt: ''
+  alt: A phone UI wireframe titled 'Task Manager App'. It shows a header, a search bar, filter tabs (All,
+    Today, In Progress, Done), four color-coded task rows with status badges such as Due today, In progress,
+    Tomorrow, and Blocked, and a bottom navigation bar with Home, Tasks, Stats, and Profile.
+- ordinal: 14
+  source: figure
+  hint: images/mm/spec_diagram.png
+  caption: ''
+  existing_alt: ''
+  alt: An architecture diagram titled 'Task Manager — Microservices Architecture'. A web client and mobile
+    app reach an API Gateway over HTTPS; the gateway routes to User, Task, and Notification services backed
+    by PostgreSQL databases and a Redis cache, with a message queue and a Prometheus and Grafana observability
+    stack.
+- ordinal: 15
+  source: code
+  hint: (code cell, no plot call matched)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: \"an astronaut riding
+    a horse on the moon, photorealistic, dramatic lighting\".'
+  existing_alt: ''
+  alt: A slightly soft generated image of an astronaut riding a white horse across a lunar surface, with
+    a crescent moon in the dark sky.
+- ordinal: 16
+  source: code
+  hint: (code cell, no plot call matched)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: \"a horse riding an astronaut,
+    photorealistic, dramatic lighting\".'
+  existing_alt: ''
+  alt: A sharper, more dramatic generated image of an astronaut riding a rearing white horse across a
+    rocky lunar surface under a starry sky.
+- ordinal: 17
+  source: code
+  hint: gallery() with three FLUX prompts (neural network, brain, mushrooms)
+  caption: 'Images generated by AI (FLUX.1-schnell {cite}`flux2024schnell`). Three abstract
+    prompts following the four-part recipe of phenomenon, material, structure, and lighting.'
+  existing_alt: ''
+  alt: A three-panel montage of three generated images. Left to right, a branching neural
+    network rendered as glossy blue liquid metal on a black background, then a human brain
+    built from glowing electric-blue and magenta coral, then a cluster of translucent bioluminescent
+    glass mushrooms in teal.
+- ordinal: 18
+  source: code
+  hint: plt.figure(figsize=(6, 1.6)) | plt.plot(samples, lw=0.4, color=BLUE)
+  caption: 'Six seconds of speech the way the computer first meets it: amplitude over time, sampled sixteen
+    thousand times a second, with no words anywhere in sight.'
+  existing_alt: ''
+  alt: An audio waveform titled '6.0 seconds of speech sampled at 16000 Hz', the blue amplitude trace
+    showing several bursts of speech separated by near-silent gaps.
+- ordinal: 19
+  source: code
+  hint: plt.figure(figsize=(6, 1.6)) | plt.imshow(mel, aspect="auto", origin="lower", cmap="Blues")
+  caption: The same six seconds as a mel spectrogram. To hear, Whisper first turns the sound into a picture
+    and then reads it.
+  existing_alt: ''
+  alt: A spectrogram titled 'the same six seconds, as the spectrogram Whisper reads', showing speech energy
+    in blue across frequency and time, with vertical striations marking the spoken segments.
+efficiency:
+- ordinal: 1
+  source: code
+  hint: fig, ax = plt.subplots(1, 1, figsize=(6, 6)) | ax.imshow(bears)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: "a monochrome illustration
+    of teddy bears mixing sparkling chemicals as mad scientists, minimalist editorial style", adapted
+    from a signature demonstration in the Imagen paper {cite}`saharia2022imagen`.'
+  existing_alt: ''
+  alt: A black-and-white cartoon of two teddy bears in lab coats doing chemistry at a table, mixing glowing
+    potions in flasks and beakers as sparks fly up between them.
+- ordinal: 2
+  source: code
+  hint: plot_throughput(results)
+  caption: 'Per-token speed on the left; on the right, each model''s wait split into prompt-reading
+    and generation. The reading sliver barely shows: the wait is almost all writing.'
+  existing_alt: ''
+  alt: 'Two panels titled ''Same One-Sentence Question, Four Models''. Left, speed per token: llama3.2
+    43 tokens per second, gemma3 36, qwen3:4b 34, deepseek-r1 19. Right, time to answer split into a
+    near-invisible prompt-reading sliver and a generation slab: llama3.2 and gemma3 finish in about 1
+    second (40 tokens each), deepseek-r1 takes 15 seconds (285 tokens), and qwen3:4b balloons to 43
+    seconds (1,449 tokens).'
+- ordinal: 3
+  source: code
+  hint: plot_context_cost(rows)
+  caption: Time before the first word of the answer as the prompt grows. The more we put in, the longer
+    the model reads before it speaks.
+  existing_alt: ''
+  alt: A line chart titled 'Every Extra Token in the Prompt Costs Time', prompt-processing time in milliseconds
+    against prompt length in tokens. The time rises steadily from 288 milliseconds at a short prompt to
+    5412 at about 4000 tokens.
+- ordinal: 4
+  source: code
+  hint: plot_conversation_cache(warm, cold)
+  caption: The transcript the app resends grows every turn, but only a model reading it fresh pays the
+    full price. The ongoing chat reads the newest question and remembers the rest.
+  existing_alt: ''
+  alt: 'Two panels titled ''Six Turns, One Growing Transcript''. Left, the transcript the app sends grows
+    each turn from 40 to 460 tokens. Right, reading time: a fresh model with no cache climbs from 165
+    to 1077 milliseconds, while an ongoing cached chat stays flat near 80.'
+- ordinal: 5
+  source: code
+  hint: plot_generation_sag(speeds)
+  caption: Generation speed across one long chat as the transcript grows from 40 to about 6,300 tokens.
+    The wobble is measurement noise; the slope is the price of a fuller cache.
+  existing_alt: ''
+  alt: A line chart titled 'Writing Slows as the Transcript Grows', generation speed in tokens per second
+    against transcript length. Speed drifts down from 42.0 at the start to 31.9 by about 6300 tokens.
+- ordinal: 6
+  source: code
+  hint: plot_task_ladder(rows)
+  caption: 'Generation speed for a 1B and a 3B model as the task climbs from simple to complex. The bars
+    barely move within each color: per-token speed belongs to the model, not the question.'
+  existing_alt: ''
+  alt: A grouped bar chart titled 'Per-Token Speed Belongs to the Model, Not the Task' comparing a 1B
+    and a 3B model across simple, moderate, and complex tasks. The 1B model holds around 70 tokens per
+    second and the 3B around 46, regardless of task difficulty.
+- ordinal: 7
+  source: code
+  hint: plot_quantization(rows)
+  caption: Disk size and generation speed across quantization levels. Each halving of precision roughly
+    halves the file and speeds things up at the same time.
+  existing_alt: ''
+  alt: Two panels titled 'One Model, Three Quantizations (Llama 3.2 1B)'. The smaller q4_K_M build takes
+    0.81 gigabytes and runs at 95 tokens per second, q8_0 takes 1.32 gigabytes at 64, and the full fp16
+    build takes 2.48 gigabytes at 39.
+- ordinal: 8
+  source: code
+  hint: plot_sparsity(SPARSITY_STUDY)
+  caption: What each model holds versus what it wakes per token, and how fast it writes. lfm2 holds
+    the most by far yet writes at 56 tokens a second, faster than the dense llama3.2 a seventh its
+    size, because only 2 billion of it fires per token.
+  existing_alt: ''
+  alt: Two panels titled 'Store a Big Model, Run a Small One'. The left panel, stored versus active
+    parameters per token, draws each model's stored size as a light bar with its active core solid
+    on top. tinyllama keeps all 1.1 billion active, llama3.2 all 3.2 billion, gemma3n 4 of its 6.9
+    billion, and lfm2 only 2 of 23.8 billion. The right panel, generation speed, shows
+    tinyllama at 136 tokens per second, lfm2 at 56, llama3.2 at 47, and gemma3n at 28, so the
+    23.8-billion-parameter lfm2 writes faster than dense models a fraction of its size.
+- ordinal: 9
+  source: code
+  hint: plot_effort_cost(EFFORT_STUDY)
+  caption: The same six tasks at each effort setting. Turning the dial up roughly doubles the token
+    bill and the time per answer, while accuracy stays put. gpt-oss solves every task at low effort,
+    and high effort solves the same ones at twice the price.
+  existing_alt: ''
+  alt: Two panels titled 'The Price of Thinking'. The left panel, What You Pay, has three bars for low,
+    medium, and high reasoning effort, rising from 80 tokens per answer at 3.2 seconds through 127 to
+    168 tokens at 7.6 seconds, colored green then amber then red. The right panel, What You Get, shows
+    accuracy over the same tasks as three identical green bars, each 6 of 6 correct, flat across all
+    three effort levels.
+responsible:
+- ordinal: 1
+  source: code
+  hint: (code cell, no plot call matched)
+  caption: 'Image generated with FLUX.1-schnell {cite}`flux2024schnell`. Prompt: "a monochrome drawing
+    of a knight lost in a dense lush forest".'
+  existing_alt: ''
+  alt: A detailed black-and-white ink drawing of a lone armored figure standing on a path through a dense
+    forest of tall trees, large leaves, and fallen logs.
+- ordinal: 2
+  source: code
+  hint: from genai.viz import plot_poison_zoo | plot_poison_zoo(POISON_STUDY)
+  caption: 'How faithfully each model follows its in-context examples, honest labels versus flipped. The
+    two bars rise together: following an example faithfully is one act, whether the label is honest or
+    planted.'
+  existing_alt: ''
+  alt: 'A grouped bar chart titled ''Who Swallows the Poisoned Labels?'' showing how completely each model
+    follows the in-context examples it is handed, honest versus flipped labels. gemma4 and qwen3 follow
+    both at 100 percent; qwen3.5 and ministral-3 follow the flipped labels at 83 percent; mistral and
+    llama3.1 follow them least, at 50 and 33 percent.'
+- ordinal: 3
+  source: code
+  hint: from genai.viz import plot_pii_screen | plot_pii_screen(PII_SCREEN_STUDY)
+  caption: How much personal information each model carries into its summaries, by default and under an
+    explicit screening instruction.
+  existing_alt: ''
+  alt: A grouped bar chart titled 'Can You Just Ask the Model to Redact?' comparing identifier-free summaries
+    when the model is asked to omit identifiers versus not asked. Asked, most models hit 100 percent;
+    not asked, they leak, dropping to 0 for gemma4, qwen3.5, and ministral-3.
+- ordinal: 4
+  source: code
+  hint: from genai.viz import plot_privacy_budget | plot_privacy_budget(rows)
+  caption: The privacy budget at work. A tiny epsilon buries the true average in noise; a large one publishes
+    it nearly exactly and protects almost nothing.
+  existing_alt: ''
+  alt: 'A line chart titled ''The Privacy Budget: No Free Lunch'', error in a released average against
+    the privacy budget epsilon on a log scale. A tight budget of 0.1 adds heavy noise for an error of
+    15.1, and as the budget loosens toward 10 the error falls to about 0.2.'
+- ordinal: 5
+  source: code
+  hint: from genai.security import show_watermark | from genai.viz import plot_watermark_detection
+  caption: A watermarked sentence and a human one through the detector. The eye sees nothing unusual;
+    the key holder sees the statistics.
+  existing_alt: ''
+  alt: A strip plot titled 'A Watermark the Eye Can't See, the Math Can' of watermark z-scores. Human-written
+    texts cluster near a z-score of minus 1 (blue), watermarked texts cluster near 6 (red), and a dashed
+    line marks the detection threshold at z equals 4.
+- ordinal: 6
+  source: code
+  hint: from genai.viz import plot_red_team_zoo | plot_red_team_zoo(RED_TEAM_STUDY)
+  caption: Six scripted attacks against every candidate, first with original instructions and then hardened
+    ones. Unhardened, nearly every model is a sieve.
+  existing_alt: ''
+  alt: A grouped bar chart titled 'Who Holds the Line Under Attack?' comparing attacks resisted with a
+    hardened security policy versus a naive setup. A policy lifts most models (gemma4 and qwen3.5 from
+    50 to 100), while functiongemma holds 100 either way and ministral-3 is unchanged at 75.

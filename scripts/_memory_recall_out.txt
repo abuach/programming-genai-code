@@ -1,0 +1,20 @@
+scoring 7 models as semantic librarians...
+
+MEMORY_RECALL_STUDY = {
+    "qwen3:latest":         {"recall_pct": 100.0},
+    "gemma4:latest":        {"recall_pct":  83.3},
+    "qwen3.5:latest":       {"recall_pct":  83.3},
+    "ministral-3:latest":   {"recall_pct":  83.3},
+    "llama3.1:latest":      {"recall_pct":  33.3},
+    "mistral:latest":       {"recall_pct":  16.7},
+    "functiongemma:latest": {"recall_pct":   0.0},
+}
+
+ranked:
+  qwen3:latest           100.0%  #########################
+  gemma4:latest           83.3%  #####################
+  qwen3.5:latest          83.3%  #####################
+  ministral-3:latest      83.3%  #####################
+  llama3.1:latest         33.3%  ########
+  mistral:latest          16.7%  ####
+  functiongemma:latest     0.0%  

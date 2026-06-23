@@ -1,0 +1,27 @@
+  [frozen] cell 13 — keeping saved output
+  [frozen] cell 18 — keeping saved output
+  [frozen] cell 23 — keeping saved output
+  [frozen] cell 29 — keeping saved output
+  [frozen] cell 38 — keeping saved output
+  [frozen] cell 49 — keeping saved output
+  [frozen] cell 53 — keeping saved output
+  [frozen] cell 58 — keeping saved output
+  [frozen] cell 60 — keeping saved output
+  [frozen] cell 63 — keeping saved output
+  [frozen] cell 67 — keeping saved output
+  [frozen] cell 70 — keeping saved output
+  [frozen] cell 75 — keeping saved output
+  [frozen] cell 81 — keeping saved output
+  [frozen] cell 93 — keeping saved output
+  [frozen] cell 99 — keeping saved output
+Executed: agentic.ipynb
+  cell 10: lines 6->6  maxlen 69->59
+  cell 23: lines 7->6  maxlen 64->67
+  cell 41: lines 9->8  maxlen 68->68
+  cell 45: lines 9->8  maxlen 68->69
+  cell 58: lines 7->6  maxlen 66->68
+  cell 86: lines 8->6  maxlen 69->65
+  cell 88: lines 4->4  maxlen 69->62
+  cell 96: lines 5->4  maxlen 66->69
+  wrote agentic.ipynb
+Reflowed: agentic.ipynb

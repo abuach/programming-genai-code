@@ -1,0 +1,9 @@
+probing tool-doc robustness on 1 models...
+
+TOOLDOC_STUDY = {
+    "gpt-oss:20b": {"precise": 100.0, "vague":   0.0},
+}
+
+ranked by vague-label call-rate (robustness):
+  gpt-oss:20b            precise 100.0%  vague   0.0%  (drop +100.0)
+uv run python scripts/_tooldocs_probe.py gpt-oss:20b  0.95s user 0.19s system 2% cpu 52.602 total

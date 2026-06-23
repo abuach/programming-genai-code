@@ -1,0 +1,20 @@
+probing calibration on 7 models...
+
+CONFIDENCE_STUDY = {
+    "gemma4:latest":        {"answerable": 3.40, "impossible": 1.80},
+    "qwen3:latest":         {"answerable": 3.80, "impossible": 2.00},
+    "qwen3.5:latest":       {"answerable": 5.00, "impossible": 2.80},
+    "mistral:latest":       {"answerable": 4.20, "impossible": 2.60},
+    "ministral-3:latest":   {"answerable": 5.00, "impossible": 3.40},
+    "llama3.1:latest":      {"answerable": 3.20, "impossible": 3.00},
+    "functiongemma:latest": {"answerable": 3.00, "impossible": 3.00},
+}
+
+ranked by calibration gap (answerable - impossible):
+  qwen3.5:latest         answerable 5.00  impossible 2.80  (gap +2.20)
+  qwen3:latest           answerable 3.80  impossible 2.00  (gap +1.80)
+  mistral:latest         answerable 4.20  impossible 2.60  (gap +1.60)
+  ministral-3:latest     answerable 5.00  impossible 3.40  (gap +1.60)
+  gemma4:latest          answerable 3.40  impossible 1.80  (gap +1.60)
+  llama3.1:latest        answerable 3.20  impossible 3.00  (gap +0.20)
+  functiongemma:latest   answerable 3.00  impossible 3.00  (gap +0.00)

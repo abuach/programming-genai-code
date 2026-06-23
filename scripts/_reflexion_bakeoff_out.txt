@@ -1,0 +1,15 @@
+reflexion bake-off  K=4 repeats=1 tasks=8
+
+  qwen2.5-coder:latest   blind 100.0%  reflexion 100.0%  (lift +0.0)
+  mistral:latest         blind  62.5%  reflexion  75.0%  (lift +12.5)
+  gemma4:latest          blind 100.0%  reflexion 100.0%  (lift +0.0)
+  qwen3:latest           blind  87.5%  reflexion 100.0%  (lift +12.5)
+  llama3.1:latest        blind  87.5%  reflexion  87.5%  (lift +0.0)
+
+REFLEXION_BAKEOFF = {
+    "qwen2.5-coder:latest": {"blind": 100.0, "reflexion": 100.0},
+    "mistral:latest":       {"blind":  62.5, "reflexion":  75.0},
+    "gemma4:latest":        {"blind": 100.0, "reflexion": 100.0},
+    "qwen3:latest":         {"blind":  87.5, "reflexion": 100.0},
+    "llama3.1:latest":      {"blind":  87.5, "reflexion":  87.5},
+}

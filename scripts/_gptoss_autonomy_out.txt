@@ -1,0 +1,6 @@
+### ROUTING ###
+{'gpt-oss:20b': {'solve_pct': 33.3, 'time_s': 148.8, 'n_correct': 4}}
+
+### SKILL REUSE ###
+{'gpt-oss:20b': {'reuse_pct': 100.0}}
+uv run python /tmp/auto_probe.py  0.90s user 0.17s system 1% cpu 1:41.31 total

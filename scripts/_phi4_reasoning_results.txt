@@ -1,0 +1,19 @@
+Well        run1  base=   5 X   reason=   4 OK closed=True  gold=4  tail='4'
+Well        run2  base=   5 X   reason=   4 OK closed=True  gold=4  tail='4'
+Well        run3  base=   6 X   reason=   4 OK closed=True  gold=4  tail='4'
+Ages        run1  base=  12 OK  reason=  12 OK closed=True  gold=12  tail='12'
+Ages        run2  base=  12 OK  reason=  12 OK closed=True  gold=12  tail='12'
+Ages        run3  base=  12 OK  reason=  12 OK closed=True  gold=12  tail='12'
+Trains      run1  base=   5 X   reason=   2 OK closed=True  gold=2  tail='2'
+Trains      run2  base=   2 OK  reason=   2 OK closed=True  gold=2  tail='2'
+Trains      run3  base=   2 OK  reason=   2 OK closed=True  gold=2  tail='2'
+Handshakes  run1  base=   7 OK  reason=   7 OK closed=True  gold=7  tail='7'
+Handshakes  run2  base=   6 X   reason=   7 OK closed=True  gold=7  tail='7'
+Handshakes  run3  base=   7 OK  reason=   7 OK closed=True  gold=7  tail='7'
+
+PHI4_REASONING_STUDY = {
+    "labels": ['Well', 'Ages', 'Trains', 'Handshakes'],
+    "base": [0.0, 1.0, 0.667, 0.667],
+    "reasoning": [1.0, 1.0, 1.0, 1.0],
+    "runs": 3,
+}

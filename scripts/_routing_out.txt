@@ -1,0 +1,20 @@
+scoring 7 models as routers...
+
+ROUTING_STUDY = {
+    "gemma4:latest":        {"accuracy_pct": 100.0},
+    "qwen3:latest":         {"accuracy_pct": 100.0},
+    "mistral:latest":       {"accuracy_pct": 100.0},
+    "ministral-3:latest":   {"accuracy_pct": 100.0},
+    "qwen3.5:latest":       {"accuracy_pct":  90.0},
+    "llama3.1:latest":      {"accuracy_pct":  60.0},
+    "functiongemma:latest": {"accuracy_pct":  50.0},
+}
+
+ranked:
+  gemma4:latest          100.0%  #########################
+  qwen3:latest           100.0%  #########################
+  mistral:latest         100.0%  #########################
+  ministral-3:latest     100.0%  #########################
+  qwen3.5:latest          90.0%  ######################
+  llama3.1:latest         60.0%  ###############
+  functiongemma:latest    50.0%  ############

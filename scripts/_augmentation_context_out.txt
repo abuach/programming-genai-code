@@ -1,0 +1,20 @@
+scoring lost-in-the-middle recall on 7 models...
+
+CONTEXT_STUDY = {
+    "llama3.1:latest":      {"edges":  50.0, "middle":  50.0},
+    "gemma4:latest":        {"edges":  37.5, "middle":   0.0},
+    "qwen3:latest":         {"edges":  37.5, "middle":   0.0},
+    "qwen3.5:latest":       {"edges":  50.0, "middle":   0.0},
+    "mistral:latest":       {"edges":  50.0, "middle":   0.0},
+    "ministral-3:latest":   {"edges":  25.0, "middle":   0.0},
+    "functiongemma:latest": {"edges":  25.0, "middle":   0.0},
+}
+
+ranked by middle recall:
+  llama3.1:latest        edges  50.0%  middle  50.0%
+  gemma4:latest          edges  37.5%  middle   0.0%
+  qwen3:latest           edges  37.5%  middle   0.0%
+  qwen3.5:latest         edges  50.0%  middle   0.0%
+  mistral:latest         edges  50.0%  middle   0.0%
+  ministral-3:latest     edges  25.0%  middle   0.0%
+  functiongemma:latest   edges  25.0%  middle   0.0%

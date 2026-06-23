@@ -1,0 +1,8 @@
+reflexion bake-off  K=4 repeats=1 tasks=8
+
+  gpt-oss:20b            blind  87.5%  reflexion 100.0%  (lift +12.5)
+
+REFLEXION_BAKEOFF = {
+    "gpt-oss:20b": {"blind":  87.5, "reflexion": 100.0},
+}
+uv run python scripts/_reflexion_bakeoff.py 1 gpt-oss:20b  0.93s user 0.19s system 0% cpu 9:42.43 total

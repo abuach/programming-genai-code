@@ -1,0 +1,32 @@
+========================================================================
+llava:latest   (16.0s)
+========================================================================
+The text in the terminal screenshot is:
+
+```
+$ python3
+Traceback (most recent call last):
+  File "main.py", line 48, in <module>
+    print(f"{data['name']} {data['age']}")
+NameError: name 'data' is not defined
+```
+
+========================================================================
+qwen3-vl:8b   (254.7s)
+========================================================================
+python3 – 80×24  
+$ python3 app.py  
+Traceback (most recent call last):  
+File "app.py", line 42, in <module>  
+result = process_data(df, config)  
+File "app.py", line 17, in process_data  
+return df.groupby(config['key']).agg(config['fn'])  
+KeyError: 'key'  
+$ _
+
+========================================================================
+llava-phi3:3.8b   (8.0s)
+========================================================================
+python3 app.py Traceback (most recent call last): File "app.py", line 24, in <module> result = process_data(process_data) TypeError: cannot return multiple values from a function() KeyboardInterrupt: Keyb
+
+DONE in 4.6 min
